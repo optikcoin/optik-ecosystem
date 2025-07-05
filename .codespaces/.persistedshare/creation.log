@@ -1,0 +1,40 @@
+2025-07-05 03:51:43.158Z: Host information
+2025-07-05 03:51:43.158Z: ----------------
+2025-07-05 03:51:43.158Z: OS: Ubuntu 22.04.5 LTS (stable release)
+2025-07-05 03:51:43.158Z: Image details: https://github.com/github/codespaces-host-images/blob/main/README.md
+2025-07-05 03:51:43.158Z: ----------------
+
+=================================================================================
+2025-07-05 03:51:43.158Z: Configuration starting...
+2025-07-05 03:51:43.196Z: Cloning...
+2025-07-05 03:51:44.276Z: Using image: mcr.microsoft.com/devcontainers/universal
+
+=================================================================================
+2025-07-05 03:51:44.303Z: Creating container...
+
+=================================================================================
+2025-07-05 03:51:45.440Z: Running blocking commands...
+2025-07-05 03:51:45.481Z: $ devcontainer up --id-label Type=codespaces --workspace-folder /var/lib/docker/codespacemount/workspace/one --mount type=bind,source=/.codespaces/agent/mount/cache,target=/vscode --user-data-folder /var/lib/docker/codespacemount/.persistedshare --container-data-folder .vscode-remote/data/Machine --container-system-data-folder /var/vscode-remote --log-level trace --log-format json --update-remote-user-uid-default never --mount-workspace-git-root false --omit-config-remote-env-from-metadata --skip-non-blocking-commands --expect-existing-container --override-config /root/.codespaces/shared/merged_devcontainer.json --default-user-env-probe loginInteractiveShell --container-session-data-folder /workspaces/.codespaces/.persistedshare/devcontainers-cli/cache --secrets-file /root/.codespaces/shared/user-secrets-envs.json
+2025-07-05 03:51:45.821Z: @devcontainers/cli 0.76.0. Node.js v18.20.8. linux 6.8.0-1027-azure x64.
+2025-07-05 03:51:46.312Z: Outcome: success User: codespace WorkspaceFolder: /workspaces/one
+2025-07-05 03:51:46.327Z: devcontainer process exited with exit code 0
+
+=================================================================================
+2025-07-05 03:51:46.378Z: Configuring codespace...
+2025-07-05 03:51:46.378Z: Running oryx...
+
+=================================================================================
+2025-07-05 03:52:15.386Z: Running commands...
+2025-07-05 03:52:15.427Z: $ devcontainer up --id-label Type=codespaces --workspace-folder /var/lib/docker/codespacemount/workspace/one --expect-existing-container --skip-post-attach --mount type=bind,source=/.codespaces/agent/mount/cache,target=/vscode --container-data-folder .vscode-remote/data/Machine --container-system-data-folder /var/vscode-remote --log-level trace --log-format json --update-remote-user-uid-default never --mount-workspace-git-root false --override-config /root/.codespaces/shared/merged_devcontainer.json --default-user-env-probe loginInteractiveShell --container-session-data-folder /workspaces/.codespaces/.persistedshare/devcontainers-cli/cache --secrets-file /root/.codespaces/shared/user-secrets-envs.json
+2025-07-05 03:52:15.990Z: @devcontainers/cli 0.76.0. Node.js v18.20.8. linux 6.8.0-1027-azure x64.
+2025-07-05 03:52:16.640Z: Running the postCreateCommand from Feature 'ghcr.io/devcontainers/features/git-lfs:1'...
+
+2025-07-05 03:52:16.646Z: /usr/local/share/pull-git-lfs-artifacts.sh
+2025-07-05 03:52:16.814Z: Fetching git lfs artifacts...
+2025-07-05 03:52:19.964Z: Skipping object checkout, Git LFS is not installed for this repository.
+Consider installing it with 'git lfs install'.
+2025-07-05 03:52:20.341Z: Outcome: success User: codespace WorkspaceFolder: /workspaces/one
+2025-07-05 03:52:20.365Z: devcontainer process exited with exit code 0
+
+=================================================================================
+2025-07-05 03:52:20.674Z: Finished configuring codespace.
