@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* OPTIK Wallet Custom Styles */
+@keyframes fade-in-out {
+  0% { opacity: 0; transform: translateY(-10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+.animate-fade-in-out {
+  animation: fade-in-out 3s ease-in-out;
+}
+
+/* Wallet Dropdown Styling */
+.wallet-adapter-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.wallet-adapter-dropdown-list {
+  position: absolute;
+  z-index: 99;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-row-gap: 10px;
+  padding: 10px;
+  top: 100%;
+  right: 0;
+  margin: 0;
+  list-style: none;
+  background: rgba(15, 23, 42, 0.95);
+  border-radius: 10px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms ease, transform 200ms ease, visibility 200ms;
+  font-family: inherit;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  backdrop-filter: blur(8px);
+  min-width: 200px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.wallet-adapter-dropdown-list-active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(10px);
+}
+
+.wallet-adapter-dropdown-list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  transition-property: all;
+  transition-duration: 0.1s;
+  background-color: transparent;
+  color: #fff;
+}
+
+.wallet-adapter-dropdown-list-item:not([disabled]):hover {
+  background-color: rgba(56, 189, 248, 0.1);
+}
+
+/* PWA Install Prompt */
+.pwa-install-prompt {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  max-width: 320px;
+}
+
+/* Wallet Connect Button Overrides */
+.wallet-adapter-button {
+  font-family: inherit !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  height: auto !important;
+  padding: 8px 16px !important;
+  border-radius: 8px !important;
+  background-image: linear-gradient(to right, #0891b2, #2563eb) !important;
+  transition: all 0.2s !important;
+}
+
+.wallet-adapter-button:hover {
+  background-image: linear-gradient(to right, #0e7490, #1d4ed8) !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25) !important;
+}
+
+.wallet-adapter-button-trigger {
+  background-color: transparent !important;
+}
+
+.wallet-adapter-modal-wrapper {
+  background: rgba(15, 23, 42, 0.95) !important;
+  backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+}
+
+.wallet-adapter-modal-button-close {
+  background-color: rgba(100, 116, 139, 0.5) !important;
+}
+
+.wallet-adapter-modal-title {
+  color: white !important;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.5);
+}
+
+/* Navigation Menu Scrolling */
+.overflow-y-auto {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(56, 189, 248, 0.3) rgba(15, 23, 42, 0.5);
+}
+
+/* Ensure menu doesn't overflow viewport */
+.max-h-\[calc\(100vh-5rem\)\] {
+  max-height: calc(100vh - 5rem);
+}
